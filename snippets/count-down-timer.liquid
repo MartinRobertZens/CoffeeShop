@@ -1,0 +1,143 @@
+<div class="outerContainer" id="mainContainer">
+    <h2>{{ block.settings.headline-text }}</h2>
+
+    <div class="timeContainer">
+       <p class="urgencyMessage">{{ block.settings.urgency-message }}</p>
+      
+       <div class="whiteTimerContainer">
+        <div class="specificTimeCOntainer" >
+            <p class="times" id="days"></p>
+            <p class="metrics">Days</p>
+        </div>
+        <div class="specificTimeCOntainer" >
+            <p class="times" id="hours"></p>
+            <p class="metrics">Hours</p>
+        </div>
+        <div class="specificTimeCOntainer" >
+            <p class="times" id="minutes"></p>
+            <p class="metrics">Minutes</p>
+        </div>
+        <div class="specificTimeCOntainer">
+            <p class="times" id="seconds"></p>
+            <p class="metrics">Seconds</p>
+        </div>
+       </div>
+        
+    </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("{{ block.settings.set-timer-time }}").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  
+
+  //testing
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+    
+    document.getElementById("mainContainer").classList.add("hidden");
+  } 
+}, 1000);
+</script>
+
+<style>
+        .outerContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: {{ block.settings.backgroundColor }};
+            border-radius: 10px;
+        }
+
+        h2{
+          color: {{ block.settings.font-color }};
+          margin-bottom: 0;
+        }
+
+        .urgencyMessage{
+          color: {{ block.settings.font-color }};
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+
+        .timeContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 11px;
+            
+        }
+
+        .specificTimeCOntainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            
+            margin: 0 5px;
+            width: 55px;
+            color: {{ block.settings.timer-color }};
+          
+        }
+
+        .whiteTimerContainer{
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 0;
+          
+        }
+
+        .specificTimeCOntainer{
+            border-radius: 10px;
+        }
+
+        .specificTimeCOntainer p{
+            margin: 5px 0;
+            
+        }
+
+        .times{
+            font-size: 30px;
+            font-weight: bold;
+            
+          
+        }
+
+        .metrics{
+            margin-top: 0 !important;
+            font-size: 12px;
+        }
+
+       .hidden{
+        display: none !important;
+    }
+
+      
+</style>

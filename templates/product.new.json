@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-test-product",
+      "blocks": {
+        "e571b69a-1658-4dde-bf41-6f6892968913": {
+          "type": "tax_notice_block",
+          "settings": {
+            "tax_notice_text": "TaxTestBlock1"
+          }
+        },
+        "dea942a0-9ed1-48ba-8c72-66db1c083b15": {
+          "type": "shipping_notice_block",
+          "settings": {
+            "shipping_notice_text": "ShippingTestBlock1"
+          }
+        },
+        "8ec758f7-e1d0-4b9e-a83d-769d9f5de635": {
+          "type": "product_price_block",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "e571b69a-1658-4dde-bf41-6f6892968913",
+        "dea942a0-9ed1-48ba-8c72-66db1c083b15",
+        "8ec758f7-e1d0-4b9e-a83d-769d9f5de635"
+      ],
+      "settings": {
+        "show_reviews": false
+      }
+    },
+    "second": {
+      "type": "main-test-product",
+      "blocks": {
+        "21c780c1-c149-4aad-9705-8ba75027333f": {
+          "type": "tax_notice_block",
+          "settings": {
+            "tax_notice_text": "TaxTestBlock2"
+          }
+        },
+        "ae12bee5-4bb5-4871-87dc-e5d3d4070279": {
+          "type": "shipping_notice_block",
+          "settings": {
+            "shipping_notice_text": "ShippingTestBlock2"
+          }
+        }
+      },
+      "block_order": [
+        "21c780c1-c149-4aad-9705-8ba75027333f",
+        "ae12bee5-4bb5-4871-87dc-e5d3d4070279"
+      ],
+      "settings": {
+        "show_reviews": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "second"
+  ]
+}

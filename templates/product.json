@@ -1,0 +1,146 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "countdown_timer_i7XDD6": {
+          "type": "CountdownTimer",
+          "settings": {
+            "headline-text": "Testing Headline",
+            "urgency-message": "Hurry up!",
+            "set-timer-time": "Jan 23, 2024 11:028:00",
+            "backgroundColor": "#9d572c",
+            "font-color": "#faf1e9",
+            "timer-color": "#80411e"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "subtitle",
+        "countdown_timer_i7XDD6",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_video_looping": false
+      }
+    },
+    "56885d27-fbde-42d9-b574-b359b5879648": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--17029728731386__56885d27-fbde-42d9-b574-b359b5879648-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/farmer.png",
+            "title": "Direct relations to farmers",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+          }
+        },
+        "template--17029728731386__56885d27-fbde-42d9-b574-b359b5879648-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/coffee-plant.png",
+            "title": "Plant a tree for 3rd order",
+            "text": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        },
+        "template--17029728731386__56885d27-fbde-42d9-b574-b359b5879648-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/roaster.png",
+            "title": "Roasted by hand in FL",
+            "text": "<p>Adipiscing diam donec adipiscing tristique risus. Adipiscing bibendum est ultricies integer quis auctor. Quis lectus nulla at volutpat diam ut venenatis tellus. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Massa tincidunt nunc pulvinar sapien et ligula.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17029728731386__56885d27-fbde-42d9-b574-b359b5879648-column-1",
+        "template--17029728731386__56885d27-fbde-42d9-b574-b359b5879648-column-2",
+        "template--17029728731386__56885d27-fbde-42d9-b574-b359b5879648-column-3"
+      ],
+      "settings": {
+        "title": "Our promises 😇",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true
+      }
+    },
+    "b36d88d3-459e-4d7f-a7bc-361e52332151": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You may also like ❤️",
+        "collection": "coffee",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "56885d27-fbde-42d9-b574-b359b5879648",
+    "b36d88d3-459e-4d7f-a7bc-361e52332151"
+  ]
+}
